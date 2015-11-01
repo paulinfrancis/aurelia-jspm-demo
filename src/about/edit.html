@@ -1,0 +1,22 @@
+<template>
+	<form role="form" submit.trigger="save()" validate.bind="validation">
+		<div>
+			Editing: ${editingName}
+		</div>
+
+		<div class="form-group">
+			<label for="fn">Name</label>
+			<input type="text" value.bind="name" class="form-control" id="fn" placeholder="Name">
+		</div>
+		<div class="form-group">
+			<label for="ln">Occupation</label>
+			<input type="text" value.bind="occupation" class="form-control" id="ln" placeholder="Occupation">
+		</div>
+		<div class="form-group">
+			<label for="hb">Hobby</label>
+			<input type="text" value.bind="hobby" class="form-control" id="hb" placeholder="Hobby">
+		</div>
+		
+		<button type="submit" disabled.bind="!validation.result.isValid" class="btn btn-default">Submit</button>
+	</form>
+</template>
